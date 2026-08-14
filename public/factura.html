@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BIDA | Facturas</title>
+
+    <link rel="stylesheet" href="factura.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         ENCABEZADO
+         ===================================================== -->
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <h1>BIDA</h1>
+            <span>Odontología Especializada</span>
+        </div>
+
+        <nav class="menu">
+
+            <a href="/index.html">Inicio</a>
+
+            <a href="/paciente.html">Pacientes</a>
+
+            <a href="/odontologo.html">Odontólogos</a>
+
+            <a href="/empleado.html">Empleados</a>
+
+            <a href="/tratamiento.html">Tratamientos</a>
+
+            <a href="/cita.html">Citas</a>
+
+            <a href="/consultorio.html">Consultorios</a>
+
+            <a href="/equipo.html">Equipos</a>
+
+            <a href="/factura.html" class="activo">Facturas</a>
+
+            <a href="/detalle_tratamiento.html">
+                Detalle de tratamientos
+            </a>
+
+            <a href="/local.html">Locales</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main>
+
+        <section class="cabecera-modulo">
+
+            <h2>Gestión de Facturas</h2>
+
+            <p>
+                Administración y consulta de las facturas
+                generadas en el sistema BIDA.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             INFORMACIÓN DEL MÓDULO
+             ================================================= -->
+
+        <section class="informacion">
+
+            <div class="tarjeta-info">
+
+                <h3>Facturación odontológica</h3>
+
+                <p>
+                    En este módulo se registran y consultan las
+                    facturas correspondientes a los servicios
+                    odontológicos prestados.
+                </p>
+
+                <p>
+                    Cada factura se relaciona con un paciente,
+                    un empleado, una cita y los tratamientos
+                    realizados.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta-info">
+
+                <h3>Información registrada</h3>
+
+                <ul>
+
+                    <li>Fecha de emisión</li>
+
+                    <li>Total de la factura</li>
+
+                    <li>Método de pago</li>
+
+                    <li>Paciente</li>
+
+                    <li>Empleado</li>
+
+                    <li>Cita</li>
+
+                    <li>Odontólogo</li>
+
+                    <li>Tratamientos</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ESTRUCTURA DE LA FACTURA
+             ================================================= -->
+
+        <section class="factura-ejemplo">
+
+            <h2>Estructura de la factura</h2>
+
+            <div class="factura-contenedor">
+
+                <div class="factura-seccion">
+
+                    <h3>Datos de la factura</h3>
+
+                    <div class="datos-grid">
+
+                        <div>
+                            <span>ID Factura</span>
+                            <strong>---</strong>
+                        </div>
+
+                        <div>
+                            <span>Fecha de emisión</span>
+                            <strong>---</strong>
+                        </div>
+
+                        <div>
+                            <span>Método de pago</span>
+                            <strong>---</strong>
+                        </div>
+
+                        <div>
+                            <span>Total</span>
+                            <strong>---</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="factura-seccion">
+
+                    <h3>Datos del paciente</h3>
+
+                    <div class="datos-grid">
+
+                        <div>
+                            <span>Documento</span>
+                            <strong>---</strong>
+                        </div>
+
+                        <div>
+                            <span>Nombre</span>
+                            <strong>---</strong>
+                        </div>
+
+                        <div>
+                            <span>Teléfono</span>
+                            <strong>---</strong>
+                        </div>
+
+                        <div>
+                            <span>Correo</span>
+                            <strong>---</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="factura-seccion">
+
+                    <h3>Datos del empleado</h3>
+
+                    <div class="datos-grid">
+
+                        <div>
+                            <span>Empleado</span>
+                            <strong>---</strong>
+                        </div>
+
+                        <div>
+                            <span>Cargo</span>
+                            <strong>---</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="factura-seccion">
+
+                    <h3>Datos de la cita</h3>
+
+                    <div class="datos-grid">
+
+                        <div>
+                            <span>Fecha</span>
+                            <strong>---</strong>
+                        </div>
+
+                        <div>
+                            <span>Hora</span>
+                            <strong>---</strong>
+                        </div>
+
+                        <div>
+                            <span>Estado</span>
+                            <strong>---</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="factura-seccion">
+
+                    <h3>Odontólogo</h3>
+
+                    <div class="datos-grid">
+
+                        <div>
+                            <span>Nombre</span>
+                            <strong>---</strong>
+                        </div>
+
+                        <div>
+                            <span>Especialidad</span>
+                            <strong>---</strong>
+                        </div>
+
+                        <div>
+                            <span>Número de licencia</span>
+                            <strong>---</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================================
+                     TRATAMIENTOS
+                     ============================================= -->
+
+                <div class="factura-seccion">
+
+                    <h3>Detalle de tratamientos</h3>
+
+                    <div class="tabla-contenedor">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+                                    <th>ID Detalle</th>
+                                    <th>Tratamiento</th>
+                                    <th>Descripción</th>
+                                    <th>Costo aplicado</th>
+                                    <th>Observaciones</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>---</td>
+
+                                    <td>
+                                        ---
+                                    </td>
+
+                                    <td>
+                                        ---
+                                    </td>
+
+                                    <td>
+                                        $ ---
+                                    </td>
+
+                                    <td>
+                                        ---
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =============================================
+                     TOTAL
+                     ============================================= -->
+
+                <div class="total-factura">
+
+                    <span>Total a pagar</span>
+
+                    <strong>$ ---</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             ENDPOINT DEL MÓDULO
+             ================================================= -->
+
+        <section class="prueba-servidor">
+
+            <h2>Conexión con el servidor</h2>
+
+            <p>
+                La información de las facturas será obtenida
+                mediante las rutas del servidor BIDA.
+            </p>
+
+            <div class="ruta">
+
+                <span>Ruta principal:</span>
+
+                <strong>
+                    /servidor/factura
+                </strong>
+
+            </div>
+
+            <div class="ruta">
+
+                <span>Consulta por ID:</span>
+
+                <strong>
+                    /servidor/factura/:id
+                </strong>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         PIE DE PÁGINA
+         ===================================================== -->
+
+    <footer class="pie">
+
+        <p>
+            BIDA - Odontología Especializada
+        </p>
+
+        <p>
+            Sistema de gestión odontológica
+        </p>
+
+    </footer>
+
+    <script src="factura.js"></script>
+
+</body>
+
+</html>

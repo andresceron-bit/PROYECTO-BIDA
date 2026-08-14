@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestión de Tratamientos</title>
+
+    <link rel="stylesheet" href="tratamiento.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <header class="encabezado">
+            <h1>Gestión de Tratamientos</h1>
+            <p>Administración de los tratamientos odontológicos</p>
+        </header>
+
+        <main>
+
+            <!-- ============================= -->
+            <!-- CONSULTAR TODOS LOS TRATAMIENTOS -->
+            <!-- ============================= -->
+
+            <section class="seccion">
+
+                <h2>Listado de Tratamientos</h2>
+
+                <div class="tabla-contenedor">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre del tratamiento</th>
+                                <th>Descripción</th>
+                                <th>Costo base</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaTratamientos">
+
+                            <tr>
+                                <td colspan="4">
+                                    Cargando tratamientos...
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- ============================= -->
+            <!-- CONSULTAR POR ID -->
+            <!-- ============================= -->
+
+            <section class="seccion">
+
+                <h2>Consultar Tratamiento por ID</h2>
+
+                <div class="formulario">
+
+                    <label for="idTratamiento">
+                        ID del tratamiento
+                    </label>
+
+                    <input type="number" id="idTratamiento" placeholder="Ingrese el ID">
+
+                    <button type="button" id="btnConsultar">
+                        Consultar tratamiento
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ============================= -->
+            <!-- REGISTRAR TRATAMIENTO -->
+            <!-- ============================= -->
+
+            <section class="seccion">
+
+                <h2>Registrar Tratamiento</h2>
+
+                <div class="formulario">
+
+                    <label for="nombreTratamiento">
+                        Nombre del tratamiento
+                    </label>
+
+                    <input type="text" id="nombreTratamiento" placeholder="Ingrese el nombre">
+
+
+                    <label for="descripcion">
+                        Descripción
+                    </label>
+
+                    <textarea id="descripcion" rows="4" placeholder="Ingrese la descripción"></textarea>
+
+
+                    <label for="costoBase">
+                        Costo base
+                    </label>
+
+                    <input type="number" id="costoBase" placeholder="Ingrese el costo">
+
+
+                    <button type="button" id="btnRegistrar">
+                        Registrar tratamiento
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ============================= -->
+            <!-- ACTUALIZAR TRATAMIENTO -->
+            <!-- ============================= -->
+
+            <section class="seccion">
+
+                <h2>Actualizar Tratamiento</h2>
+
+                <div class="formulario">
+
+                    <label for="idActualizar">
+                        ID del tratamiento
+                    </label>
+
+                    <input type="number" id="idActualizar" placeholder="Ingrese el ID">
+
+
+                    <label for="nombreActualizar">
+                        Nombre del tratamiento
+                    </label>
+
+                    <input type="text" id="nombreActualizar" placeholder="Nuevo nombre">
+
+
+                    <label for="descripcionActualizar">
+                        Descripción
+                    </label>
+
+                    <textarea id="descripcionActualizar" rows="4" placeholder="Nueva descripción"></textarea>
+
+
+                    <label for="costoActualizar">
+                        Costo base
+                    </label>
+
+                    <input type="number" id="costoActualizar" placeholder="Nuevo costo">
+
+
+                    <button type="button" id="btnActualizar">
+                        Actualizar tratamiento
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ============================= -->
+            <!-- ELIMINAR TRATAMIENTO -->
+            <!-- ============================= -->
+
+            <section class="seccion">
+
+                <h2>Eliminar Tratamiento</h2>
+
+                <div class="formulario">
+
+                    <label for="idEliminar">
+                        ID del tratamiento
+                    </label>
+
+                    <input type="number" id="idEliminar" placeholder="Ingrese el ID">
+
+                    <button type="button" id="btnEliminar" class="boton-eliminar">
+                        Eliminar tratamiento
+                    </button>
+
+                </div>
+
+            </section>
+
+        <main>
+
+    <p id="mensajeTratamiento"></p>
+
+    <!-- resto del contenido -->
+
+
+
+        <footer class="pie">
+            <p>BIDA Odontología Especializada</p>
+        </footer>
+
+    </div>
+
+<script src="tratamiento.js"></script>
+
+</body>
+
+</html>

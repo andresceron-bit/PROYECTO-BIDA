@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BIDA | Gestión de Pacientes</title>
+
+    <link rel="stylesheet" href="paciente.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <h1>BIDA</h1>
+            <span>Odontología Especializada</span>
+        </div>
+
+        <nav class="menu">
+
+            <a href="/index.html">Inicio</a>
+            <a href="/paciente.html">Pacientes</a>
+            <a href="/odontologo.html">Odontólogos</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="contenedor">
+
+        <section class="titulo">
+
+            <h2>Gestión de Pacientes</h2>
+
+            <p>
+                Administración de la información de los pacientes
+                registrados en BIDA Odontología Especializada.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             FORMULARIO
+        ========================== -->
+
+        <section class="tarjeta">
+
+            <h3>Registrar paciente</h3>
+
+            <form id="formPaciente">
+
+                <div class="formulario">
+
+                    <div class="campo">
+
+                        <label for="id_paciente">
+                            ID del paciente
+                        </label>
+
+                        <input
+                            type="number"
+                            id="id_paciente"
+                            name="id_paciente"
+                            placeholder="Ingrese el ID"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="documento_identidad">
+                            Documento de identidad
+                        </label>
+
+                        <input
+                            type="text"
+                            id="documento_identidad"
+                            name="documento_identidad"
+                            placeholder="Número de documento"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="nombre">
+                            Nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Nombre del paciente"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="apellido">
+                            Apellido
+                        </label>
+
+                        <input
+                            type="text"
+                            id="apellido"
+                            name="apellido"
+                            placeholder="Apellido del paciente"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="fecha_nacimiento">
+                            Fecha de nacimiento
+                        </label>
+
+                        <input
+                            type="date"
+                            id="fecha_nacimiento"
+                            name="fecha_nacimiento"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="genero">
+                            Género
+                        </label>
+
+                        <select
+                            id="genero"
+                            name="genero"
+                        >
+
+                            <option value="">
+                                Seleccione
+                            </option>
+
+                            <option value="Masculino">
+                                Masculino
+                            </option>
+
+                            <option value="Femenino">
+                                Femenino
+                            </option>
+
+                            <option value="Otro">
+                                Otro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="direccion">
+                            Dirección
+                        </label>
+
+                        <input
+                            type="text"
+                            id="direccion"
+                            name="direccion"
+                            placeholder="Dirección"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="telefono">
+                            Teléfono
+                        </label>
+
+                        <input
+                            type="text"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="Número de teléfono"
+                        >
+
+                    </div>
+
+
+                    <div class="campo campo-completo">
+
+                        <label for="correo">
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="correo@ejemplo.com"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="botones">
+
+                    <button
+                        type="submit"
+                        class="btn guardar">
+                        Guardar paciente
+                    </button>
+
+                    <button
+                        type="reset"
+                        class="btn limpiar">
+                        Limpiar
+                    </button>
+
+                </div>
+
+            </form>
+
+            <div id="mensaje" class="mensaje"></div>
+
+        </section>
+
+
+        <!-- =========================
+             CONSULTAR PACIENTE
+        ========================== -->
+
+        <section class="tarjeta">
+
+            <h3>Consultar paciente</h3>
+
+            <div class="buscar">
+
+                <label for="buscarId">
+                    ID del paciente
+                </label>
+
+                <input
+                    type="number"
+                    id="buscarId"
+                    placeholder="Ingrese el ID"
+                >
+
+                <button
+                    type="button"
+                    class="btn consultar">
+                    Consultar
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TABLA DE PACIENTES
+        ========================== -->
+
+        <section class="tarjeta">
+
+            <div class="titulo-tabla">
+
+                <div>
+
+                    <h3>Pacientes registrados</h3>
+
+                    <p>
+                        Información registrada en el sistema BIDA.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn actualizar">
+                    Actualizar lista
+                </button>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Documento</th>
+
+                            <th>Nombre</th>
+
+                            <th>Apellido</th>
+
+                            <th>Fecha nacimiento</th>
+
+                            <th>Género</th>
+
+                            <th>Dirección</th>
+
+                            <th>Teléfono</th>
+
+                            <th>Correo</th>
+
+                            <th>Acciones</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaPacientes">
+
+                        <tr>
+
+                            <td colspan="10">
+                                No hay información cargada.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer class="pie">
+
+        <p>
+            BIDA - Odontología Especializada
+        </p>
+
+        <p>
+            Módulo de gestión de pacientes
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript del módulo -->
+
+    <script src="paciente.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BIDA | Gestión de Empleados</title>
+
+    <link rel="stylesheet" href="empleado.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <h1>BIDA</h1>
+            <span>Odontología Especializada</span>
+        </div>
+
+        <nav class="menu">
+
+            <a href="/index.html">Inicio</a>
+
+            <a href="/paciente.html">Pacientes</a>
+
+            <a href="/odontologo.html">Odontólogos</a>
+
+            <a href="/empleado.html">Empleados</a>
+
+            <a href="#">Tratamientos</a>
+
+            <a href="#">Citas</a>
+
+            <a href="#">Consultorios</a>
+
+            <a href="#">Equipos</a>
+
+            <a href="#">Facturas</a>
+
+            <a href="#">Detalle de tratamientos</a>
+
+            <a href="#">Locales</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================== -->
+
+    <main class="contenedor">
+
+        <section class="titulo">
+
+            <h2>Gestión de Empleados</h2>
+
+            <p>
+                Administración de la información de los empleados
+                de BIDA Odontología Especializada.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             FORMULARIO
+        ========================== -->
+
+        <section class="tarjeta">
+
+            <h3>Registrar empleado</h3>
+
+            <form id="formEmpleado">
+
+                <div class="grupo-formulario">
+
+                    <div class="campo">
+
+                        <label for="nombre">
+                            Nombre
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Ingrese el nombre"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="apellido">
+                            Apellido
+                        </label>
+
+                        <input
+                            type="text"
+                            id="apellido"
+                            name="apellido"
+                            placeholder="Ingrese el apellido"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="cargo">
+                            Cargo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cargo"
+                            name="cargo"
+                            placeholder="Ingrese el cargo"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="correo">
+                            Correo
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="Ingrese el correo"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="telefono">
+                            Teléfono
+                        </label>
+
+                        <input
+                            type="text"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="Ingrese el teléfono"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="botones">
+
+                    <button type="submit" class="btn-principal">
+                        Guardar empleado
+                    </button>
+
+                    <button type="reset" class="btn-secundario">
+                        Limpiar
+                    </button>
+
+                </div>
+
+            </form>
+
+            <div id="mensaje"></div>
+
+        </section>
+
+
+        <!-- =========================
+             CONSULTAR EMPLEADO
+        ========================== -->
+
+        <section class="tarjeta">
+
+            <h3>Consultar empleado por ID</h3>
+
+            <div class="buscar">
+
+                <input
+                    type="number"
+                    id="buscarId"
+                    placeholder="Ingrese el ID del empleado"
+                >
+
+                <button
+                    type="button"
+                    id="btnBuscar"
+                    class="btn-principal"
+                >
+                    Consultar
+                </button>
+
+            </div>
+
+            <div id="resultadoBusqueda"></div>
+
+        </section>
+
+
+        <!-- =========================
+             TABLA DE EMPLEADOS
+        ========================== -->
+
+        <section class="tarjeta">
+
+            <div class="titulo-tabla">
+
+                <div>
+
+                    <h3>Lista de empleados</h3>
+
+                    <p>
+                        Información registrada en el sistema.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="btnCargar"
+                    class="btn-principal"
+                >
+                    Actualizar lista
+                </button>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Cargo</th>
+                            <th>Correo</th>
+                            <th>Teléfono</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaEmpleados">
+
+                        <tr>
+
+                            <td colspan="6">
+                                Cargando empleados...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+    ========================== -->
+
+    <footer class="pie">
+
+        <p>
+            BIDA - Odontología Especializada
+        </p>
+
+        <p>
+            Sistema de gestión odontológica
+        </p>
+
+    </footer>
+
+    <script src="empleado.js"></script>
+
+</body>
+
+</html>

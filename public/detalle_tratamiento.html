@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BIDA | Detalle de Tratamientos</title>
+
+    <link rel="stylesheet" href="detalle-tratamiento.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <h1>BIDA</h1>
+            <span>Odontología Especializada</span>
+        </div>
+
+        <nav class="menu">
+
+            <a href="/index.html">Inicio</a>
+
+            <a href="/paciente.html">Pacientes</a>
+
+            <a href="/odontologo.html">Odontólogos</a>
+
+            <a href="/empleado.html">Empleados</a>
+
+            <a href="/cita.html">Citas</a>
+
+            <a href="/consultorio.html">Consultorios</a>
+
+            <a href="/tratamiento.html">Tratamientos</a>
+
+            <a href="/equipo.html">Equipos</a>
+
+            <a href="/factura.html">Facturas</a>
+
+            <a href="/detalle-tratamiento.html">
+                Detalle de tratamientos
+            </a>
+
+            <a href="#">Locales</a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             TÍTULO DEL MÓDULO
+             ========================= -->
+
+        <section class="titulo">
+
+            <h2>Gestión de Detalle de Tratamientos</h2>
+
+            <p>
+                Administración de los detalles de los tratamientos
+                realizados en BIDA Odontología Especializada.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             INFORMACIÓN GENERAL
+             ========================= -->
+
+        <section class="informacion">
+
+            <div class="tarjeta">
+
+                <h3>Información del módulo</h3>
+
+                <p>
+                    Este módulo permite gestionar la información
+                    relacionada con los tratamientos realizados
+                    durante las citas odontológicas.
+                </p>
+
+                <p>
+                    Aquí se relacionan el tratamiento, la cita,
+                    el paciente, el odontólogo, el costo aplicado
+                    y las observaciones correspondientes.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <h3>Datos principales</h3>
+
+                <div class="datos">
+
+                    <div>
+                        <strong>ID Detalle</strong>
+                        <span>Identificador del detalle del tratamiento.</span>
+                    </div>
+
+                    <div>
+                        <strong>Tratamiento</strong>
+                        <span>Tratamiento odontológico realizado.</span>
+                    </div>
+
+                    <div>
+                        <strong>Cita</strong>
+                        <span>Cita en la que se realizó el tratamiento.</span>
+                    </div>
+
+                    <div>
+                        <strong>Costo aplicado</strong>
+                        <span>Valor cobrado por el tratamiento.</span>
+                    </div>
+
+                    <div>
+                        <strong>Observaciones</strong>
+                        <span>Información adicional del tratamiento.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RELACIONES
+             ========================= -->
+
+        <section class="relaciones">
+
+            <h2>Información relacionada</h2>
+
+            <div class="contenedor-relaciones">
+
+                <div class="relacion">
+
+                    <h3>Tratamiento</h3>
+
+                    <p>
+                        Nombre, descripción y costo base
+                        del tratamiento odontológico.
+                    </p>
+
+                </div>
+
+
+                <div class="relacion">
+
+                    <h3>Cita</h3>
+
+                    <p>
+                        Fecha, hora y estado de la cita
+                        asociada al tratamiento.
+                    </p>
+
+                </div>
+
+
+                <div class="relacion">
+
+                    <h3>Paciente</h3>
+
+                    <p>
+                        Paciente al que se le realizó
+                        el tratamiento.
+                    </p>
+
+                </div>
+
+
+                <div class="relacion">
+
+                    <h3>Odontólogo</h3>
+
+                    <p>
+                        Profesional encargado de realizar
+                        el tratamiento.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             OPERACIONES
+             ========================= -->
+
+        <section class="acciones">
+
+            <h2>Operaciones del módulo</h2>
+
+            <div class="contenedor-acciones">
+
+                <div class="accion">
+
+                    <h3>Consultar detalles</h3>
+
+                    <p>
+                        Permite consultar los detalles de
+                        tratamientos registrados.
+                    </p>
+
+                </div>
+
+
+                <div class="accion">
+
+                    <h3>Buscar por ID</h3>
+
+                    <p>
+                        Permite consultar un detalle específico
+                        mediante su identificador.
+                    </p>
+
+                </div>
+
+
+                <div class="accion">
+
+                    <h3>Registrar detalle</h3>
+
+                    <p>
+                        Permite registrar un nuevo detalle
+                        asociado a una cita y tratamiento.
+                    </p>
+
+                </div>
+
+
+                <div class="accion">
+
+                    <h3>Actualizar</h3>
+
+                    <p>
+                        Permite modificar la información
+                        de un detalle existente.
+                    </p>
+
+                </div>
+
+
+                <div class="accion">
+
+                    <h3>Eliminar</h3>
+
+                    <p>
+                        Permite eliminar un detalle de
+                        tratamiento registrado.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+     GESTIÓN DE DETALLES
+     ========================= -->
+
+<section class="gestion">
+
+    <div class="tarjeta">
+
+        <h3>Registrar detalle de tratamiento</h3>
+
+        <form id="formDetalle">
+
+            <div class="formulario">
+
+                <div class="campo">
+                    <label for="id_tratamiento">
+                        ID del tratamiento
+                    </label>
+
+                    <input
+                        type="number"
+                        id="id_tratamiento"
+                        name="id_tratamiento"
+                        placeholder="Ingrese el ID del tratamiento"
+                        required
+                    >
+                </div>
+
+
+                <div class="campo">
+                    <label for="id_cita">
+                        ID de la cita
+                    </label>
+
+                    <input
+                        type="number"
+                        id="id_cita"
+                        name="id_cita"
+                        placeholder="Ingrese el ID de la cita"
+                        required
+                    >
+                </div>
+
+
+                <div class="campo">
+                    <label for="costo_aplicado">
+                        Costo aplicado
+                    </label>
+
+                    <input
+                        type="number"
+                        id="costo_aplicado"
+                        name="costo_aplicado"
+                        placeholder="Ingrese el costo"
+                        step="0.01"
+                        required
+                    >
+                </div>
+
+
+                <div class="campo campo-completo">
+
+                    <label for="observaciones">
+                        Observaciones
+                    </label>
+
+                    <textarea
+                        id="observaciones"
+                        name="observaciones"
+                        placeholder="Ingrese observaciones"
+                        rows="4"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <div class="botones">
+
+                <button
+                    type="submit"
+                    class="boton principal">
+                    Guardar detalle
+                </button>
+
+                <button
+                    type="reset"
+                    class="boton secundario">
+                    Limpiar
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!-- CONSULTAR POR ID -->
+
+    <div class="tarjeta">
+
+        <h3>Consultar detalle por ID</h3>
+
+        <div class="buscar">
+
+            <input
+                type="number"
+                id="buscarId"
+                placeholder="Ingrese el ID del detalle"
+            >
+
+            <button
+                type="button"
+                id="btnConsultar"
+                class="boton principal">
+                Consultar
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- LISTADO -->
+
+    <div class="tarjeta">
+
+        <div class="titulo-tabla">
+
+            <div>
+
+                <h3>Detalles registrados</h3>
+
+                <p>
+                    Información almacenada en la base de datos.
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                id="btnActualizar"
+                class="boton principal">
+                Actualizar lista
+            </button>
+
+        </div>
+
+
+        <div class="tabla-contenedor">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+                        <th>Tratamiento</th>
+                        <th>Cita</th>
+                        <th>Paciente</th>
+                        <th>Odontólogo</th>
+                        <th>Costo aplicado</th>
+                        <th>Observaciones</th>
+                        <th>Acciones</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaDetalles">
+
+                    <tr>
+
+                        <td colspan="8">
+                            Cargando información...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="mensaje"
+        class="mensaje">
+    </div>
+
+</section>
+
+
+    <!-- =========================
+         PIE DE PÁGINA
+         ========================= -->
+
+    <footer class="pie">
+
+        <p>
+            BIDA - Odontología Especializada
+        </p>
+
+        <p>
+            Módulo de detalle de tratamientos
+        </p>
+
+    </footer>
+
+    <script src="detalle-tratamiento.js"></script>
+
+</body>
+
+</html>

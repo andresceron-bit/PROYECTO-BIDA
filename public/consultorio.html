@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BIDA | Consultorios</title>
+
+    <link rel="stylesheet" href="consultorio.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <h1>BIDA</h1>
+            <span>Odontología Especializada</span>
+        </div>
+
+        <nav class="menu">
+
+            <a href="/index.html">Inicio</a>
+            <a href="/paciente.html">Pacientes</a>
+            <a href="/odontologo.html">Odontólogos</a>
+            <a href="/empleado.html">Empleados</a>
+            <a href="/cita.html">Citas</a>
+            <a href="/consultorio.html">Consultorios</a>
+            <a href="/tratamiento.html">Tratamientos</a>
+            <a href="/equipo.html">Equipos</a>
+            <a href="/factura.html">Facturas</a>
+            <a href="/detalle_tratamiento.html">Detalle de tratamientos</a>
+            <a href="/local.html">Locales</a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="titulo">
+
+            <h2>Gestión de Consultorios</h2>
+
+            <p>
+                Administración de los consultorios disponibles
+                en BIDA Odontología Especializada.
+            </p>
+
+        </section>
+
+
+        <!-- REGISTRAR CONSULTORIO -->
+
+        <section class="tarjeta">
+
+            <h3>Registrar consultorio</h3>
+
+            <form id="formConsultorio">
+
+                <div class="formulario">
+
+                    <div class="campo">
+
+                        <label for="id_numero">
+                            Número del consultorio
+                        </label>
+
+                        <input
+                            type="number"
+                            id="id_numero"
+                            required
+                            placeholder="Ejemplo: 101"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="id_local">
+                            ID del local
+                        </label>
+
+                        <input
+                            type="number"
+                            id="id_local"
+                            required
+                            placeholder="ID del local"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="id_odontologo">
+                            ID del odontólogo
+                        </label>
+
+                        <input
+                            type="number"
+                            id="id_odontologo"
+                            required
+                            placeholder="ID del odontólogo"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="botones">
+
+                    <button
+                        type="submit"
+                        class="btn guardar">
+                        Registrar consultorio
+                    </button>
+
+                    <button
+                        type="reset"
+                        class="btn limpiar">
+                        Limpiar
+                    </button>
+
+                </div>
+
+            </form>
+
+            <div id="mensaje" class="mensaje"></div>
+
+        </section>
+
+
+        <!-- CONSULTAR POR ID -->
+
+        <section class="tarjeta">
+
+            <h3>Consultar consultorio por ID</h3>
+
+            <div class="buscar">
+
+                <label for="buscarId">
+                    ID del consultorio
+                </label>
+
+                <input
+                    type="number"
+                    id="buscarId"
+                    placeholder="Ingrese el ID"
+                >
+
+                <button
+                    type="button"
+                    id="btnConsultar"
+                    class="btn consultar">
+                    Consultar
+                </button>
+
+            </div>
+
+            <div id="resultadoConsulta" class="resultado"></div>
+
+        </section>
+
+
+        <!-- LISTADO -->
+
+        <section class="tarjeta">
+
+            <div class="titulo-tabla">
+
+                <div>
+
+                    <h3>Consultorios registrados</h3>
+
+                    <p>
+                        Información registrada en el sistema BIDA.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    id="btnActualizar"
+                    class="btn actualizar">
+                    Actualizar lista
+                </button>
+
+            </div>
+
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Número</th>
+                            <th>Local</th>
+                            <th>Dirección</th>
+                            <th>Ciudad</th>
+                            <th>Odontólogo</th>
+                            <th>Especialidad</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaConsultorios">
+
+                        <tr>
+
+                            <td colspan="7">
+                                Cargando información...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTUALIZAR -->
+
+        <section class="tarjeta">
+
+            <h3>Actualizar consultorio</h3>
+
+            <form id="formActualizar">
+
+                <div class="formulario">
+
+                    <div class="campo">
+
+                        <label for="actualizarId">
+                            ID del consultorio
+                        </label>
+
+                        <input
+                            type="number"
+                            id="actualizarId"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="nuevoNumero">
+                            Número
+                        </label>
+
+                        <input
+                            type="number"
+                            id="nuevoNumero"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="nuevoLocal">
+                            ID del local
+                        </label>
+
+                        <input
+                            type="number"
+                            id="nuevoLocal"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="nuevoOdontologo">
+                            ID del odontólogo
+                        </label>
+
+                        <input
+                            type="number"
+                            id="nuevoOdontologo"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="botones">
+
+                    <button
+                        type="submit"
+                        class="btn guardar">
+                        Actualizar consultorio
+                    </button>
+
+                </div>
+
+            </form>
+
+            <div id="mensajeActualizar" class="mensaje"></div>
+
+        </section>
+
+
+        <!-- ELIMINAR -->
+
+        <section class="tarjeta">
+
+            <h3>Eliminar consultorio</h3>
+
+            <div class="buscar">
+
+                <label for="eliminarId">
+                    ID del consultorio
+                </label>
+
+                <input
+                    type="number"
+                    id="eliminarId"
+                    placeholder="Ingrese el ID"
+                >
+
+                <button
+                    type="button"
+                    id="btnEliminar"
+                    class="btn eliminar">
+                    Eliminar consultorio
+                </button>
+
+            </div>
+
+            <div id="mensajeEliminar" class="mensaje"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="pie">
+
+        <p>
+            BIDA - Odontología Especializada
+        </p>
+
+        <p>
+            Módulo de gestión de consultorios
+        </p>
+
+    </footer>
+
+
+    <script src="consultorio.js"></script>
+
+</body>
+
+</html>

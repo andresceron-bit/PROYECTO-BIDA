@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BIDA | Iniciar sesión</title>
+
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+
+<body>
+
+    <main class="contenedor">
+
+        <section class="tarjeta">
+
+            <header class="encabezado">
+
+                <h1>BIDA</h1>
+
+                <h2>Iniciar sesión</h2>
+
+                <p>
+                    Sistema de Odontología Especializada
+                </p>
+
+            </header>
+
+
+            <form id="formLogin" class="formulario">
+
+                <div class="grupo">
+
+                    <label for="documento">
+                        Documento de identidad
+                    </label>
+
+                    <input
+                        type="text"
+                        id="documento"
+                        name="documento"
+                        placeholder="Ingrese su documento"
+                        minlength="5"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="grupo">
+
+                    <label for="correo">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="Ingrese su correo"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit">
+                    Ingresar
+                </button>
+
+
+                <div id="mensaje"></div>
+
+
+                <div class="enlaces">
+
+                    <a href="#">
+                        ¿Olvidaste tus datos?
+                    </a>
+
+                    <a href="#">
+                        Solicitar acceso
+                    </a>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script src="/login.js"></script>
+
+</body>
+
+</html>

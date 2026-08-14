@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f8fb;
+    color: #263238;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   ENCABEZADO
+   ========================= */
+
+.encabezado {
+    background-color: #0b7285;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo h1 {
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MENÚ
+   ========================= */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: white;
+    color: #0b7285;
+}
+
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+   ========================= */
+
+.contenedor {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 25px;
+}
+
+
+/* =========================
+   TÍTULO
+   ========================= */
+
+.titulo {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo h2 {
+    color: #0b7285;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.titulo p {
+    color: #607d8b;
+    font-size: 17px;
+}
+
+
+/* =========================
+   PANELES
+   ========================= */
+
+.panel {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e6ea;
+}
+
+.panel h3 {
+    color: #0b7285;
+    margin-bottom: 25px;
+    font-size: 23px;
+}
+
+
+/* =========================
+   FORMULARIO
+   ========================= */
+
+#formOdontologo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo label {
+    font-weight: bold;
+    color: #37474f;
+}
+
+.grupo input {
+    padding: 12px;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: none;
+}
+
+.grupo input:focus {
+    border-color: #0b7285;
+    box-shadow: 0 0 0 2px rgba(11, 114, 133, 0.12);
+}
+
+
+/* =========================
+   BOTONES
+   ========================= */
+
+.botones {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.botones button,
+.busqueda button {
+    border: none;
+    background-color: #0b7285;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.botones button:hover,
+.busqueda button:hover {
+    background-color: #095c6b;
+}
+
+
+/* =========================
+   MENSAJE
+   ========================= */
+
+#mensaje {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   TABLA
+   ========================= */
+
+.titulo-tabla {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.titulo-tabla h3 {
+    margin-bottom: 5px;
+}
+
+.titulo-tabla p {
+    color: #607d8b;
+}
+
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+}
+
+thead {
+    background-color: #0b7285;
+    color: white;
+}
+
+th,
+td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #e0e6ea;
+}
+
+tbody tr:hover {
+    background-color: #f4f8fb;
+}
+
+
+/* =========================
+   BÚSQUEDA
+   ========================= */
+
+.buscar {
+    margin-bottom: 40px;
+}
+
+.busqueda {
+    display: flex;
+    gap: 12px;
+}
+
+.busqueda input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #b0bec5;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+#resultadoBusqueda {
+    margin-top: 20px;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+   ========================= */
+
+.pie {
+    background-color: #263238;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.pie p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CELULARES
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .encabezado {
+        flex-direction: column;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    #formOdontologo {
+        grid-template-columns: 1fr;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .busqueda {
+        flex-direction: column;
+    }
+
+    .contenedor {
+        padding: 30px 15px;
+    }
+
+}

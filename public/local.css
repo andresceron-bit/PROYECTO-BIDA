@@ -1,0 +1,780 @@
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f8fb;
+    color: #263238;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.encabezado {
+    background-color: #0b7285;
+    color: white;
+
+    padding: 20px 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo h1 {
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MENÚ
+   ========================================================= */
+
+.menu {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+}
+
+.menu a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 9px 12px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: white;
+
+    color: #0b7285;
+}
+
+.menu a.activo {
+    background-color: white;
+
+    color: #0b7285;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   CABECERA DEL MÓDULO
+   ========================================================= */
+
+.cabecera-modulo {
+    background-color: white;
+
+    text-align: center;
+
+    padding: 55px 30px;
+
+    border-bottom: 1px solid #e0e6ea;
+}
+
+.cabecera-modulo h2 {
+    color: #0b7285;
+
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+.cabecera-modulo p {
+    color: #607d8b;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   INFORMACIÓN
+   ========================================================= */
+
+.informacion {
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 0 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 25px;
+}
+
+.tarjeta-info {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e0e6ea;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-info h3 {
+    color: #0b7285;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.tarjeta-info p {
+    color: #607d8b;
+
+    line-height: 1.6;
+
+    margin-bottom: 10px;
+}
+
+.tarjeta-info ul {
+    padding-left: 20px;
+
+    color: #546e7a;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   INFORMACIÓN DEL LOCAL
+   ========================================================= */
+
+.local-ejemplo {
+    max-width: 1100px;
+
+    margin: 50px auto;
+
+    padding: 0 25px;
+}
+
+.local-ejemplo > h2 {
+    text-align: center;
+
+    color: #0b7285;
+
+    font-size: 30px;
+
+    margin-bottom: 30px;
+}
+
+.local-contenedor {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 14px;
+
+    border: 1px solid #e0e6ea;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================================
+   DATOS
+   ========================================================= */
+
+.datos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
+}
+
+.dato {
+    background-color: #f4f8fb;
+
+    padding: 20px;
+
+    border-radius: 9px;
+
+    border: 1px solid #e0e6ea;
+}
+
+.dato span {
+    display: block;
+
+    color: #78909c;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+.dato strong {
+    color: #263238;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   UBICACIÓN
+   ========================================================= */
+
+.ubicacion {
+    max-width: 1100px;
+
+    margin: 50px auto;
+
+    padding: 0 25px;
+}
+
+.ubicacion > h2 {
+    text-align: center;
+
+    color: #0b7285;
+
+    font-size: 30px;
+
+    margin-bottom: 30px;
+}
+
+.ubicacion-contenedor {
+    background-color: white;
+
+    border: 1px solid #e0e6ea;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.ubicacion-icono {
+    font-size: 45px;
+}
+
+.ubicacion-contenedor h3 {
+    color: #0b7285;
+
+    margin-bottom: 10px;
+}
+
+.ubicacion-contenedor p {
+    color: #607d8b;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PRUEBA DEL SERVIDOR
+   ========================================================= */
+
+.prueba-servidor {
+    max-width: 1100px;
+
+    margin: 40px auto 60px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    border: 1px solid #e0e6ea;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.prueba-servidor h2 {
+    color: #0b7285;
+
+    margin-bottom: 12px;
+}
+
+.prueba-servidor p {
+    color: #607d8b;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+.ruta {
+    background-color: #f4f8fb;
+
+    border: 1px solid #e0e6ea;
+
+    border-radius: 7px;
+
+    padding: 13px 16px;
+
+    margin-top: 10px;
+}
+
+.ruta span {
+    color: #607d8b;
+}
+
+.ruta strong {
+    color: #0b7285;
+
+    margin-left: 8px;
+}
+
+
+/* =========================================================
+   PIE DE PÁGINA
+   ========================================================= */
+
+.pie {
+    background-color: #263238;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 30px;
+}
+
+.pie p {
+    margin: 5px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ADAPTACIÓN PARA CELULAR
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .encabezado {
+        flex-direction: column;
+
+        padding: 25px;
+
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .cabecera-modulo {
+        padding: 40px 20px;
+    }
+
+    .cabecera-modulo h2 {
+        font-size: 28px;
+    }
+
+    .informacion {
+        padding: 0 20px;
+    }
+
+    .local-ejemplo {
+        padding: 0 20px;
+    }
+
+    .ubicacion {
+        padding: 0 20px;
+    }
+
+    .ubicacion-contenedor {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .prueba-servidor {
+        margin-left: 20px;
+
+        margin-right: 20px;
+    }
+}
+
+/* =========================================================
+   CRUD DE LOCALES
+   ========================================================= */
+
+.contenedor {
+    max-width: 1250px;
+    margin: auto;
+    padding: 40px 30px;
+}
+
+
+/* TARJETAS */
+
+.tarjeta {
+    background-color: white;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e0e6ea;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+.tarjeta h2 {
+    color: #0b7285;
+
+    margin-bottom: 25px;
+}
+
+
+/* MENSAJES */
+
+.mensaje {
+    margin-bottom: 25px;
+
+    padding: 12px;
+
+    border-radius: 7px;
+
+    min-height: 20px;
+}
+
+
+/* FORMULARIO */
+
+.formulario {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.campo label {
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #37474f;
+}
+
+
+.campo input {
+
+    padding: 12px;
+
+    border: 1px solid #cfd8dc;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+.campo input:focus {
+
+    border-color: #0b7285;
+
+    box-shadow:
+        0 0 0 2px rgba(11, 114, 133, 0.12);
+}
+
+
+/* BUSCAR */
+
+.buscar {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+.buscar label {
+
+    font-weight: bold;
+
+    color: #37474f;
+}
+
+
+.buscar input {
+
+    padding: 11px;
+
+    border: 1px solid #cfd8dc;
+
+    border-radius: 7px;
+
+    width: 250px;
+}
+
+
+/* BOTONES */
+
+.botones {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.btn {
+
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 11px 20px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.guardar {
+
+    background-color: #0b7285;
+
+    color: white;
+}
+
+
+.limpiar {
+
+    background-color: #eceff1;
+
+    color: #37474f;
+}
+
+
+.consultar {
+
+    background-color: #1971c2;
+
+    color: white;
+}
+
+
+.actualizar {
+
+    background-color: #0b7285;
+
+    color: white;
+}
+
+
+.eliminar,
+.eliminar-fila {
+
+    background-color: #c62828;
+
+    color: white;
+}
+
+
+.consultar-fila {
+
+    background-color: #1971c2;
+
+    color: white;
+
+    margin-right: 5px;
+}
+
+
+/* TABLA */
+
+.titulo-tabla {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.titulo-tabla p {
+
+    color: #607d8b;
+
+    font-size: 14px;
+}
+
+
+.tabla-contenedor {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 700px;
+}
+
+
+thead {
+
+    background-color: #0b7285;
+
+    color: white;
+}
+
+
+th,
+td {
+
+    padding: 12px;
+
+    border-bottom: 1px solid #e0e6ea;
+
+    text-align: left;
+
+    font-size: 14px;
+}
+
+
+tbody tr:hover {
+
+    background-color: #f4f8fb;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    .formulario {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .buscar {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .buscar input {
+
+        width: 100%;
+
+    }
+
+
+    .botones {
+
+        flex-direction: column;
+
+    }
+
+
+    .btn {
+
+        width: 100%;
+
+    }
+
+
+    .titulo-tabla {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}

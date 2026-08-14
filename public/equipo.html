@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BIDA | Gestión de Equipos</title>
+
+    <link rel="stylesheet" href="equipo.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <h1>BIDA</h1>
+            <span>Odontología Especializada</span>
+        </div>
+
+        <nav class="menu">
+
+            <a href="/index.html">Inicio</a>
+            <a href="/paciente.html">Pacientes</a>
+            <a href="/odontologo.html">Odontólogos</a>
+            <a href="/empleado.html">Empleados</a>
+            <a href="/tratamiento.html">Tratamientos</a>
+            <a href="/cita.html">Citas</a>
+            <a href="/consultorio.html">Consultorios</a>
+            <a href="/equipo.html" class="activo">Equipos</a>
+            <a href="/factura.html">Facturas</a>
+            <a href="/detalle-tratamiento.html">Detalles</a>
+            <a href="/local.html">Locales</a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="encabezado-modulo">
+
+            <h2>Gestión de Equipos</h2>
+
+            <p>
+                Administración de los equipos odontológicos registrados
+                en el sistema BIDA.
+            </p>
+
+        </section>
+
+
+        <section class="informacion">
+
+            <div class="tarjeta">
+
+                <h3>Equipos odontológicos</h3>
+
+                <p>
+                    En este módulo se podrá consultar y administrar
+                    la información de los equipos utilizados en la
+                    institución odontológica.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <h3>Información registrada</h3>
+
+                <ul>
+                    <li>Tipo de equipo</li>
+                    <li>Número de equipo</li>
+                    <li>Fecha de mantenimiento</li>
+                    <li>Local</li>
+                    <li>Consultorio</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+
+        <section class="tabla-seccion">
+
+            <h2>Registro de equipos</h2>
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>ID Equipo</th>
+                            <th>Tipo</th>
+                            <th>Número</th>
+                            <th>Fecha de mantenimiento</th>
+                            <th>ID Local</th>
+                            <th>ID Consultorio</th>
+                            <th>Acciones</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaEquipo">
+
+                        <tr>
+                            <td colspan="7">
+                               Cargando equipos...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <section class="acciones">
+
+            <h2>Operaciones disponibles</h2>
+
+            <div class="contenedor-acciones">
+
+                <div class="accion">
+                    <h3>Consultar equipos</h3>
+                    <p>
+                        Permite consultar todos los equipos registrados.
+                    </p>
+                </div>
+
+                <div class="accion">
+                    <h3>Consultar por ID</h3>
+                    <p>
+                        Permite consultar la información de un equipo
+                        específico.
+                    </p>
+                </div>
+
+                <div class="accion">
+                    <h3>Registrar equipo</h3>
+                    <p>
+                        Permite registrar un nuevo equipo odontológico.
+                    </p>
+                </div>
+
+                <div class="accion">
+                    <h3>Actualizar equipo</h3>
+                    <p>
+                        Permite modificar la información de un equipo.
+                    </p>
+                </div>
+
+                <div class="accion">
+                    <h3>Eliminar equipo</h3>
+                    <p>
+                        Permite eliminar un equipo registrado.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="pie">
+
+        <p>
+            BIDA - Odontología Especializada
+        </p>
+
+        <p>
+            Sistema de gestión odontológica
+        </p>
+
+    </footer>
+
+    <script src="equipo.js"></script>
+
+</body>
+
+</html>

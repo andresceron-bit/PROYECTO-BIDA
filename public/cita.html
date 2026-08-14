@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BIDA | Gestión de Citas</title>
+
+    <link rel="stylesheet" href="cita.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         ENCABEZADO
+    ========================================== -->
+
+    <header class="encabezado">
+
+        <div class="logo">
+            <h1>BIDA</h1>
+            <span>Odontología Especializada</span>
+        </div>
+
+        <nav class="menu">
+
+            <a href="/index.html">Inicio</a>
+
+            <a href="/paciente.html">Pacientes</a>
+
+            <a href="/odontologo.html">Odontólogos</a>
+
+            <a href="/empleado.html">Empleados</a>
+
+            <a href="/cita.html">Citas</a>
+
+            <a href="#">Tratamientos</a>
+
+            <a href="#">Consultorios</a>
+
+            <a href="#">Equipos</a>
+
+            <a href="#">Facturas</a>
+
+            <a href="#">Detalle de tratamientos</a>
+
+            <a href="#">Locales</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================================
+         CONTENIDO PRINCIPAL
+    ========================================== -->
+
+    <main>
+
+        <section class="bienvenida">
+
+            <div class="contenido">
+
+                <h2>Gestión de Citas</h2>
+
+                <p>
+                    Administración de las citas odontológicas
+                    registradas en el sistema BIDA.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             INFORMACIÓN DEL MÓDULO
+        ====================================== -->
+
+        <section class="modulo">
+
+            <h2>Información de las citas</h2>
+
+            <p class="descripcion">
+                En este módulo se podrá consultar y administrar
+                la información relacionada con las citas odontológicas.
+            </p>
+
+
+            <!-- =================================
+                 FORMULARIO DE CITA
+            ================================== -->
+
+            <div class="tarjeta">
+
+                <h3>Registrar cita</h3>
+
+                <form id="formCita">
+
+                    <div class="grupo-formulario">
+
+                        <div class="campo">
+
+                            <label for="fecha">
+                                Fecha
+                            </label>
+
+                            <input
+                                type="date"
+                                id="fecha"
+                                name="fecha"
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="hora">
+                                Hora
+                            </label>
+
+                            <input
+                                type="time"
+                                id="hora"
+                                name="hora"
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="estado">
+                                Estado
+                            </label>
+
+                            <select
+                                id="estado"
+                                name="estado"
+                            >
+
+                                <option value="">
+                                    Seleccione un estado
+                                </option>
+
+                                <option value="Pendiente">
+                                    Pendiente
+                                </option>
+
+                                <option value="Confirmada">
+                                    Confirmada
+                                </option>
+
+                                <option value="Atendida">
+                                    Atendida
+                                </option>
+
+                                <option value="Cancelada">
+                                    Cancelada
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="id_paciente">
+                                ID del paciente
+                            </label>
+
+                            <input
+                                type="number"
+                                id="id_paciente"
+                                name="id_paciente"
+                                placeholder="Ingrese el ID"
+                            >
+
+                        </div>
+
+
+                        <div class="campo">
+
+                            <label for="id_odontologo">
+                                ID del odontólogo
+                            </label>
+
+                            <input
+                                type="number"
+                                id="id_odontologo"
+                                name="id_odontologo"
+                                placeholder="Ingrese el ID"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="botones">
+
+                        <button
+                            type="submit"
+                            class="boton principal"
+                        >
+                            Guardar cita
+                        </button>
+
+                        <button
+                            type="reset"
+                            class="boton secundario"
+                        >
+                            Limpiar
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- =================================
+                 CONSULTAR CITA POR ID
+            ================================== -->
+
+            <div class="tarjeta">
+
+                <h3>Consultar cita por ID</h3>
+
+                <div class="buscar">
+
+                    <input
+                        type="number"
+                        id="buscarId"
+                        placeholder="Ingrese el ID de la cita"
+                    >
+
+                    <button
+                        type="button"
+                        id="btnConsultar"
+                        class="boton principal"
+                    >
+                        Consultar
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 TABLA DE CITAS
+            ================================== -->
+
+            <div class="tarjeta">
+
+                <div class="titulo-tabla">
+
+                    <div>
+
+                        <h3>Citas registradas</h3>
+
+                        <p>
+                            Información de las citas almacenadas
+                            en la base de datos.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        id="btnActualizar"
+                        class="boton principal"
+                    >
+                        Actualizar lista
+                    </button>
+
+                </div>
+
+
+                <div class="tabla-contenedor">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>ID</th>
+
+                                <th>Fecha</th>
+
+                                <th>Hora</th>
+
+                                <th>Estado</th>
+
+                                <th>ID Paciente</th>
+
+                                <th>ID Odontólogo</th>
+
+                                <th>Acciones</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tablaCitas">
+
+                            <tr>
+
+                                <td colspan="7">
+                                    Las citas aparecerán aquí
+                                    cuando conectemos el JavaScript.
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 ÁREA PARA MOSTRAR RESULTADOS
+            ================================== -->
+
+            <div
+                id="mensaje"
+                class="mensaje"
+            >
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         PIE DE PÁGINA
+    ========================================== -->
+
+    <footer class="pie">
+
+        <p>
+            BIDA - Odontología Especializada
+        </p>
+
+        <p>
+            Sistema de gestión odontológica
+        </p>
+
+    </footer>
+
+<script src="cita.js"></script>
+
+</body>
+
+</html>

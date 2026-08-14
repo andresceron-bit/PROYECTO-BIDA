@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #263238;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.encabezado {
+    background-color: #1565c0;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.encabezado h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.encabezado p {
+    font-size: 16px;
+}
+
+.seccion {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.seccion h2 {
+    color: #1565c0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e3eaf2;
+    padding-bottom: 10px;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #1565c0;
+    color: white;
+}
+
+th,
+td {
+    padding: 13px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f8fb;
+}
+
+tbody tr:hover {
+    background-color: #e8f1fb;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 700px;
+}
+
+.formulario label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8c4d0;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: #1565c0;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 7px;
+    background-color: #1565c0;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0d47a1;
+}
+
+.boton-eliminar {
+    background-color: #c62828;
+}
+
+.boton-eliminar:hover {
+    background-color: #8e0000;
+}
+
+.pie {
+    text-align: center;
+    padding: 20px;
+    color: #607d8b;
+}
+
+@media (max-width: 700px) {
+
+    .contenedor {
+        width: 95%;
+    }
+
+    .encabezado h1 {
+        font-size: 24px;
+    }
+
+    .seccion {
+        padding: 18px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+        font-size: 14px;
+    }
+}

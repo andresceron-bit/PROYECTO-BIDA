@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f8fb;
+    color: #263238;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   ENCABEZADO
+   ========================= */
+
+.encabezado {
+    background-color: #0b7285;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo h1 {
+    font-size: 34px;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   MENÚ
+   ========================= */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: white;
+    color: #0b7285;
+}
+
+
+/* =========================
+   TÍTULO
+   ========================= */
+
+.titulo {
+    background-color: white;
+    text-align: center;
+    padding: 55px 25px;
+}
+
+.titulo h2 {
+    color: #0b7285;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.titulo p {
+    color: #607d8b;
+    font-size: 18px;
+}
+
+
+/* =========================
+   INFORMACIÓN
+   ========================= */
+
+.informacion {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e0e6ea;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta h3 {
+    color: #0b7285;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    color: #607d8b;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   DATOS
+   ========================= */
+
+.datos {
+    display: grid;
+    gap: 15px;
+}
+
+.datos div {
+    padding: 15px;
+    background-color: #f4f8fb;
+    border-radius: 8px;
+    border-left: 4px solid #0b7285;
+}
+
+.datos strong {
+    display: block;
+    color: #263238;
+    margin-bottom: 5px;
+}
+
+.datos span {
+    color: #607d8b;
+    font-size: 14px;
+}
+
+
+/* =========================
+   RELACIONES
+   ========================= */
+
+.relaciones {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 25px;
+}
+
+.relaciones > h2 {
+    text-align: center;
+    color: #0b7285;
+    margin-bottom: 30px;
+}
+
+.contenedor-relaciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.relacion {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e6ea;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.relacion:hover {
+    transform: translateY(-4px);
+    border-color: #0b7285;
+}
+
+.relacion h3 {
+    color: #0b7285;
+    margin-bottom: 10px;
+}
+
+.relacion p {
+    color: #607d8b;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   OPERACIONES
+   ========================= */
+
+.acciones {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 25px;
+}
+
+.acciones > h2 {
+    text-align: center;
+    color: #0b7285;
+    margin-bottom: 30px;
+}
+
+.contenedor-acciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.accion {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e6ea;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.accion:hover {
+    transform: translateY(-4px);
+    border-color: #0b7285;
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+}
+
+.accion h3 {
+    color: #0b7285;
+    margin-bottom: 10px;
+}
+
+.accion p {
+    color: #607d8b;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+   ========================= */
+
+.pie {
+    background-color: #263238;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+.pie p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   CELULAR
+   ========================= */
+
+@media (max-width: 800px) {
+
+    .encabezado {
+        flex-direction: column;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .titulo h2 {
+        font-size: 28px;
+    }
+
+    .informacion,
+    .relaciones,
+    .acciones {
+        padding: 0 20px;
+    }
+}

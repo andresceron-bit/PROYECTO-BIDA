@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BIDA | Gestión de Locales</title>
+
+    <link rel="stylesheet"
+          href="local.css">
+
+</head>
+
+<body>
+
+
+<header class="encabezado">
+
+    <div class="logo">
+
+        <h1>BIDA</h1>
+
+        <span>Odontología Especializada</span>
+
+    </div>
+
+
+    <nav class="menu">
+
+        <a href="/index.html">Inicio</a>
+
+        <a href="/paciente.html">Pacientes</a>
+
+        <a href="/odontologo.html">Odontólogos</a>
+
+        <a href="/empleado.html">Empleados</a>
+
+        <a href="/tratamiento.html">Tratamientos</a>
+
+        <a href="/cita.html">Citas</a>
+
+        <a href="/consultorio.html">Consultorios</a>
+
+        <a href="/equipo.html">Equipos</a>
+
+        <a href="/factura.html">Facturas</a>
+
+        <a href="/detalle_tratamiento.html">
+            Detalle de tratamientos
+        </a>
+
+        <a href="/local.html"
+           class="activo">
+            Locales
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="contenedor">
+
+
+    <section class="cabecera-modulo">
+
+        <h2>Gestión de Locales</h2>
+
+        <p>
+            Administración de los locales pertenecientes
+            a la institución odontológica BIDA.
+        </p>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         MENSAJES
+    =========================================== -->
+
+    <div id="mensaje"
+         class="mensaje">
+    </div>
+
+
+
+    <!-- ==========================================
+         REGISTRAR LOCAL
+    =========================================== -->
+
+    <section class="tarjeta">
+
+        <h2>Registrar local</h2>
+
+
+        <form id="formLocal">
+
+            <div class="formulario">
+
+
+                <div class="campo">
+
+                    <label for="calle">
+                        Calle
+                    </label>
+
+                    <input
+                        type="text"
+                        id="calle"
+                        placeholder="Ejemplo: Calle 5"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="numero">
+                        Número
+                    </label>
+
+                    <input
+                        type="text"
+                        id="numero"
+                        placeholder="Ejemplo: 10-25"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="ciudad">
+                        Ciudad
+                    </label>
+
+                    <input
+                        type="text"
+                        id="ciudad"
+                        placeholder="Ejemplo: Popayán"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+            <div class="botones">
+
+                <button
+                    type="submit"
+                    class="btn guardar">
+
+                    Registrar local
+
+                </button>
+
+
+                <button
+                    type="reset"
+                    class="btn limpiar">
+
+                    Limpiar
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         CONSULTAR LOCAL
+    =========================================== -->
+
+    <section class="tarjeta">
+
+        <h2>Consultar local por ID</h2>
+
+
+        <div class="buscar">
+
+            <label for="buscarId">
+                ID del local
+            </label>
+
+
+            <input
+                type="number"
+                id="buscarId"
+                placeholder="Ingrese el ID"
+            >
+
+
+            <button
+                type="button"
+                id="botonConsultar"
+                class="btn consultar">
+
+                Consultar
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         ACTUALIZAR LOCAL
+    =========================================== -->
+
+    <section class="tarjeta">
+
+        <h2>Actualizar local</h2>
+
+
+        <form id="formActualizar">
+
+            <div class="formulario">
+
+
+                <div class="campo">
+
+                    <label for="idActualizar">
+                        ID del local
+                    </label>
+
+                    <input
+                        type="number"
+                        id="idActualizar"
+                        placeholder="Ingrese el ID"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="calleActualizar">
+                        Calle
+                    </label>
+
+                    <input
+                        type="text"
+                        id="calleActualizar"
+                        placeholder="Nueva calle"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="numeroActualizar">
+                        Número
+                    </label>
+
+                    <input
+                        type="text"
+                        id="numeroActualizar"
+                        placeholder="Nuevo número"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="ciudadActualizar">
+                        Ciudad
+                    </label>
+
+                    <input
+                        type="text"
+                        id="ciudadActualizar"
+                        placeholder="Nueva ciudad"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn actualizar">
+
+                Actualizar local
+
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         ELIMINAR LOCAL
+    =========================================== -->
+
+    <section class="tarjeta">
+
+        <h2>Eliminar local</h2>
+
+
+        <div class="buscar">
+
+            <label for="idEliminar">
+                ID del local
+            </label>
+
+
+            <input
+                type="number"
+                id="idEliminar"
+                placeholder="Ingrese el ID"
+            >
+
+
+            <button
+                type="button"
+                id="botonEliminar"
+                class="btn eliminar">
+
+                Eliminar local
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         TABLA DE LOCALES
+    =========================================== -->
+
+    <section class="tarjeta">
+
+        <div class="titulo-tabla">
+
+            <div>
+
+                <h2>Locales registrados</h2>
+
+                <p>
+                    Información registrada en el sistema BIDA.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="botonActualizarLista"
+                class="btn actualizar">
+
+                Actualizar lista
+
+            </button>
+
+        </div>
+
+
+        <div class="tabla-contenedor">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>ID</th>
+
+                        <th>Calle</th>
+
+                        <th>Número</th>
+
+                        <th>Ciudad</th>
+
+                        <th>Acciones</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="tablaLocales">
+
+                    <tr>
+
+                        <td colspan="5">
+                            Cargando locales...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<footer class="pie">
+
+    <p>
+        BIDA - Odontología Especializada
+    </p>
+
+    <p>
+        Sistema de gestión odontológica
+    </p>
+
+</footer>
+
+
+
+<script src="local.js"></script>
+
+</body>
+
+</html>
