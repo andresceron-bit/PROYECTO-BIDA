@@ -158,7 +158,7 @@ formulario.addEventListener('submit', async (evento) => {
             setTimeout(() => {
 
                 window.location.href =
-                    '/index.html';
+                    'index.html';
 
             }, 1000);
 

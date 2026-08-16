@@ -19,7 +19,7 @@ const sesion =
 if (sesion !== 'activa') {
 
     window.location.href =
-        '/login.html';
+        'login.html';
 
 }
 
@@ -111,7 +111,7 @@ if (botonCerrarSesion) {
             // Regresar al login
 
             window.location.href =
-                '/login.html';
+                'login.html';
 
         }
     );
