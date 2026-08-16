@@ -3,6 +3,10 @@
 // BIDA Odontología Especializada
 // ============================================================
 
+const URL_BASE =
+    window.location.port === '3040'
+        ? '/servidor'
+        : 'http://localhost:3040/servidor';
 
 const formulario =
     document.getElementById('formLogin');
@@ -60,7 +64,7 @@ formulario.addEventListener('submit', async (evento) => {
         // ====================================================
 
         const respuesta = await fetch(
-            `/servidor/empleado/documento/${encodeURIComponent(documento)}`
+            `${URL_BASE}/empleado/documento/${encodeURIComponent(documento)}`
         );
 
 

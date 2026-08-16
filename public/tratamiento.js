@@ -8,7 +8,10 @@
 // CONFIGURACIÓN
 // ============================================================
 
-const API = '/servidor/tratamiento';
+const API_URL =
+    window.location.port === '3040'
+        ? '/servidor/tratamiento'
+        : 'http://localhost:3040/servidor/tratamiento';
 
 
 // ============================================================
@@ -120,7 +123,7 @@ async function cargarTratamientos() {
         `;
 
 
-        const respuesta = await fetch(API);
+        const respuesta = await fetch(API_URL);
 
 
         const datos = await respuesta.json();
@@ -253,7 +256,7 @@ async function consultarTratamiento() {
 
 
         const respuesta =
-            await fetch(`${API}/${id}`);
+            await fetch(`${API_URL}/${id}`);
 
 
         const datos =
@@ -381,7 +384,7 @@ async function registrarTratamiento() {
 
 
         const respuesta =
-            await fetch(API, {
+            await fetch(API_URL, {
 
                 method: 'POST',
 
@@ -523,7 +526,7 @@ async function actualizarTratamiento() {
 
 
         const respuesta =
-            await fetch(`${API}/${id}`, {
+            await fetch(`${API_URL}/${id}`, {
 
                 method: 'PUT',
 
@@ -619,7 +622,7 @@ async function eliminarTratamiento() {
 
 
         const respuesta =
-            await fetch(`${API}/${id}`, {
+            await fetch(`${API_URL}/${id}`, {
 
                 method: 'DELETE'
             });

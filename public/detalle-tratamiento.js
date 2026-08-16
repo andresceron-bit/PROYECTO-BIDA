@@ -2,7 +2,10 @@
 // CONFIGURACIÓN
 // ============================================================
 
-const API = '/servidor/detalle-tratamiento';
+const API_URL =
+    window.location.port === '3040'
+        ? '/servidor/detalle-tratamiento'
+        : 'http://localhost:3040/servidor/detalle-tratamiento';
 
 
 // ============================================================
@@ -40,7 +43,7 @@ async function cargarDetalles() {
 
     try {
 
-        const respuesta = await fetch(API);
+        const respuesta = await fetch(API_URL);
 
         const datos = await respuesta.json();
 
@@ -150,7 +153,7 @@ async function consultarDetalle(id) {
 
     try {
 
-        const respuesta = await fetch(`${API}/${id}`);
+        const respuesta = await fetch(`${API_URL}/${id}`);
 
         const datos = await respuesta.json();
 
@@ -254,7 +257,7 @@ if (formDetalle) {
 
         try {
 
-            const respuesta = await fetch(API, {
+            const respuesta = await fetch(API_URL, {
 
                 method: 'POST',
 
@@ -325,7 +328,7 @@ async function eliminarDetalle(id) {
 
     try {
 
-        const respuesta = await fetch(`${API}/${id}`, {
+        const respuesta = await fetch(`${API_URL}/${id}`, {
 
             method: 'DELETE'
 

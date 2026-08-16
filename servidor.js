@@ -13,6 +13,7 @@ const consultorioRoutes = require('./routes/consultorioRoutes');
 const citaRoutes = require('./routes/citaRoutes');
 
 var servidor = express ();
+servidor.use(cors());
 servidor.use(express.static('public'));
 servidor.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
@@ -58,14 +59,15 @@ servidor.use((req, res, next) => {
     });
 });
 
-//Asignamos el puerto 3040 a una variable
-var puerto = 3040;
+// Puerto del servidor
+// Si el entorno proporciona un puerto, se utiliza.
+// Si no, se mantiene el puerto 3040.
+var puerto = process.env.PORT || 3040;
 
-//probamos la conexion con servidor local
-servidor.listen (puerto,function() {
-    console.log('conexion con servidor ok en puerto'+
-        puerto);
-    });
+// Iniciar servidor
+servidor.listen(puerto, '0.0.0.0', function () {
+    console.log('Servidor funcionando en el puerto ' + puerto);
+});
 
 //crear la primera ruta de acceso con el metodo get
  servidor.get('/servidor',function (req,res) {

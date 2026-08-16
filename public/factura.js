@@ -3,7 +3,10 @@
 // Módulo frontend de facturas - BIDA
 // ============================================================
 
-const API_URL = '/servidor/factura';
+const API_URL =
+    window.location.port === '3040'
+        ? '/servidor/factura'
+        : 'http://localhost:3040/servidor/factura';
 
 
 // ============================================================

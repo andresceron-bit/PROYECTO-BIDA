@@ -2,7 +2,10 @@
 // CONFIGURACIÓN
 // ============================================================
 
-const API_URL = '/servidor/equipo';
+const API_URL =
+    window.location.port === '3040'
+        ? '/servidor/equipo'
+        : 'http://localhost:3040/servidor/equipo';
 
 
 // ============================================================

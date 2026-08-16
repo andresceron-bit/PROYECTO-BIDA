@@ -2,7 +2,10 @@
 // CONFIGURACIÓN
 // ============================================================
 
-const API = '/servidor/odontologo';
+const API_URL =
+    window.location.port === '3040'
+        ? '/servidor/odontologo'
+        : 'http://localhost:3040/servidor/odontologo';
 
 
 // ============================================================
@@ -36,7 +39,7 @@ async function cargarOdontologos() {
 
     try {
 
-        const respuesta = await fetch(API);
+        const respuesta = await fetch(API_URL);
 
         const datos = await respuesta.json();
 
@@ -124,7 +127,7 @@ async function buscarOdontologo(id) {
 
     try {
 
-        const respuesta = await fetch(`${API}/${id}`);
+        const respuesta = await fetch(`${API_URL}/${id}`);
 
         const datos = await respuesta.json();
 
@@ -267,7 +270,7 @@ if (formulario) {
 
         try {
 
-            const respuesta = await fetch(API, {
+            const respuesta = await fetch(API_URL, {
 
                 method: 'POST',
 
@@ -339,7 +342,7 @@ async function eliminarOdontologo(id) {
 
     try {
 
-        const respuesta = await fetch(`${API}/${id}`, {
+        const respuesta = await fetch(`${API_URL}/${id}`, {
 
             method: 'DELETE'
         });

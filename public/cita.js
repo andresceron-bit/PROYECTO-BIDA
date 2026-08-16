@@ -3,7 +3,13 @@
 // ============================================================
 
 // Ruta principal de la API
-const API_CITA = '/servidor/cita';
+// URL BASE DEL SERVIDOR
+const URL_BASE =
+    window.location.port === '3040'
+        ? '/servidor'
+        : 'http://localhost:3040/servidor';
+
+const API_CITA = `${URL_BASE}/cita`;
 
 
 // ============================================================

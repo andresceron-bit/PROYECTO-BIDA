@@ -5,7 +5,10 @@
 
 
 // URL BASE DEL SERVIDOR
-const URL_BASE = '/servidor';
+const URL_BASE =
+    window.location.port === '3040'
+        ? '/servidor'
+        : 'http://localhost:3040/servidor';
 
 
 // ============================================================

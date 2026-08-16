@@ -2,7 +2,13 @@
 // CONFIGURACIÓN
 // ============================================================
 
-const URL_API = '/servidor/consultorio';
+// URL BASE DEL SERVIDOR
+const URL_BASE =
+    window.location.port === '3040'
+        ? '/servidor'
+        : 'http://localhost:3040/servidor';
+
+const URL_API = `${URL_BASE}/consultorio`;
 
 
 // ============================================================

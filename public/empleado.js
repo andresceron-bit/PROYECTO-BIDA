@@ -3,7 +3,10 @@
 // empleado.js
 // ============================================================
 
-const API_URL = '/servidor/empleado';
+const API_URL =
+    window.location.port === '3040'
+        ? '/servidor/empleado'
+        : 'http://localhost:3040/servidor/empleado';
 
 
 // ============================================================
